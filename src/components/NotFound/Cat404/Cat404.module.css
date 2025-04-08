@@ -5,14 +5,40 @@
 	justify-content: center;
 	column-gap: 8px;
 }
+.CatImgBox {
+	width: 109px;
+	height: 109px;
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 50%;
+	overflow: hidden;
+}
+.CatImgBox picture {
+	object-fit: cover;
+}
+
 @media screen and (min-width: 768px) {
 	.IconBox svg {
 		width: 175px;
 		height: 300px;
 	}
+	.CatImgBox {
+		width: 280px;
+		height: 280px;
+	}
 }
 @media screen and (min-width: 1280px) {
 	.IconBox svg {
 		width: 185px;
+	}
+	.CatImgBox {
+		width: 300px;
+		height: 300px;
+	}
+	.CatImgBox picture {
+		object-position: -20px;
+	}
+	.CatImgBox picture img {
+		width: 300px;
+		height: 300px;
 	}
 }

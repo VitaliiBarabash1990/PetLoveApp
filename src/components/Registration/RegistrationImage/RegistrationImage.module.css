@@ -1,0 +1,50 @@
+.RegisterImageBox {
+	position: relative;
+	background-color: var(--accent-color);
+	border-radius: 30px;
+	overflow: hidden;
+}
+.RegisterImageBox picture {
+	position: relative;
+	z-index: 1;
+}
+.RegisterImageBox picture img {
+	animation: appearDown 1000ms ease 1;
+}
+.RegisterImageBox svg {
+	position: absolute;
+	bottom: 45px;
+	left: 0;
+	transform: scale(1.6);
+	z-index: 0;
+}
+@media screen and (min-width: 768px) {
+	.RegisterImageBox {
+		border-radius: 60px;
+	}
+	.RegisterImageBox picture {
+		right: -250px;
+	}
+	.RegisterImageBox svg {
+		transform: scale(2.8);
+		bottom: -24px;
+		left: 224px;
+	}
+}
+@media screen and (min-width: 1280px) {
+	.RegisterImageBox {
+		width: 592px;
+		height: 654px;
+	}
+	.RegisterImageBox picture {
+		right: unset;
+		left: 40px;
+		bottom: -22px;
+	}
+	.RegisterImageBox svg {
+		transform: scale(4);
+		bottom: unset;
+		top: 278px;
+		left: 134px;
+	}
+}

@@ -13,6 +13,7 @@ import AddPet from "../../pages/AddPet/AddPet";
 import RestrictedRoute from "../RestrictedRoute/RestrictedRoute";
 import Login from "../../pages/Login/Login";
 import NotFound from "../../pages/NotFound/NotFound";
+import Register from "../../pages/Register/Register";
 
 function App() {
 	return (
@@ -40,6 +41,12 @@ function App() {
 					path="login"
 					element={
 						<RestrictedRoute redirectTo="/profile" component={<Login />} />
+					}
+				/>
+				<Route
+					path="register"
+					element={
+						<RestrictedRoute redirectTo="/profile" component={<Register />} />
 					}
 				/>
 				<Route path="*" element={<NotFound />} />

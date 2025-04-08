@@ -16,6 +16,29 @@
 	align-items: center;
 	justify-content: center;
 }
+.Text404 {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.25;
+	letter-spacing: -0.03em;
+	color: var(--white-color);
+	margin: 20px 0;
+	text-align: center;
+}
+.StyledLink {
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.29;
+	letter-spacing: -0.03em;
+	color: var(--accent-color);
+	padding: 12px 30px;
+	border-radius: 30px;
+	background-color: var(--accent-light);
+	transition: var(--hover-general);
+}
+.StyledLink:hover {
+	background-color: var(--hover-color);
+}
 @media screen and (min-width: 768px) {
 	.HomePageSection {
 		max-width: 768px;
@@ -23,6 +46,22 @@
 	}
 	.container {
 		border-radius: 60px;
+	}
+	.Text404 {
+		font-size: 24px;
+		line-height: 1.17;
+		margin: 40px 0 20px 0;
+	}
+	.LinkBox {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.StyledLink {
+		font-size: 16px;
+		line-height: 1.25;
+		padding: 14px 30px;
 	}
 }
 
