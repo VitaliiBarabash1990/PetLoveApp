@@ -1,0 +1,18 @@
+.ContainerContent {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 8px;
+}
+@media screen and (min-width: 768px) {
+	.IconBox svg {
+		width: 175px;
+		height: 300px;
+	}
+}
+@media screen and (min-width: 1280px) {
+	.IconBox svg {
+		width: 185px;
+	}
+}
