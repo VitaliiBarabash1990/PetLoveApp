@@ -1,0 +1,66 @@
+.HomePageSection {
+	position: relative;
+	padding: 0 20px;
+	max-width: 375px;
+	margin: 0 auto;
+}
+.ContainerCreation {
+	background-color: var(--white-color);
+	border-radius: 30px;
+	padding: 28px 20px;
+	margin-top: 10px;
+	animation: appearLeft 1000ms ease 1;
+}
+.MainTitle {
+	font-weight: 700;
+	font-size: 28px;
+	line-height: 1;
+	letter-spacing: -0.03em;
+	color: var(--dark-color);
+	margin-bottom: 24px;
+}
+.MainTitle span {
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 1.29;
+	color: var(--subtitle-color);
+}
+
+@media screen and (min-width: 768px) {
+	.HomePageSection {
+		max-width: 768px;
+		padding: 0 32px;
+	}
+	.ContainerCreation {
+		border-radius: 60px;
+		margin-top: 16px;
+		padding: 40px 136px;
+	}
+	.MainTitle {
+		font-size: 32px;
+	}
+	.MainTitle span {
+		font-size: 16px;
+		line-height: 1.25;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.HomePageSection {
+		max-width: 1280px;
+	}
+	.DesktopBox {
+		display: flex;
+		align-items: flex-start;
+		column-gap: 32px;
+	}
+	.ContainerCreation {
+		margin-top: 0px;
+		width: 592px;
+		height: 654px;
+		padding: 60px 80px;
+	}
+	.MainTitle {
+		margin-bottom: 40px;
+	}
+}

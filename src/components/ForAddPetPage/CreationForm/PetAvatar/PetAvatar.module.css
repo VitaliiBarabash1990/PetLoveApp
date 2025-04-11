@@ -1,0 +1,34 @@
+.AvatarContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.ImageBox {
+	overflow: hidden;
+	width: 68px;
+	height: 68px;
+	border-radius: 50%;
+	background-color: var(--accent-light);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.ImageBox svg {
+	fill: var(--accent-color);
+}
+.ImageBox img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+@media screen and (min-width: 768px) {
+	.ImageBox {
+		width: 86px;
+		height: 86px;
+		margin-top: -36px;
+	}
+	.ImageBox svg {
+		width: 44px;
+		height: 44px;
+	}
+}

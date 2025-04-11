@@ -1,0 +1,15 @@
+.Icon {
+	fill: none;
+	stroke: var(--dark-color);
+	transition: var(--hover-general);
+}
+.Icon:hover,
+.Icon:focus {
+	stroke: var(--accent-color);
+}
+@media screen and (min-width: 768px) {
+	.Icon {
+		width: 20px;
+		height: 20px;
+	}
+}

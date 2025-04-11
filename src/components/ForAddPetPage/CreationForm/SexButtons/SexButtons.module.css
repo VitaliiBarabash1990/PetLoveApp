@@ -1,0 +1,85 @@
+.ListItems {
+	display: flex;
+	align-items: center;
+	column-gap: 8px;
+}
+.ListItems li {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: var(--hover-general);
+}
+.FemaleLi[data-value="female"] {
+	background-color: #f43f5e;
+}
+.FemaleLi {
+	background-color: rgba(244, 63, 94, 0.1);
+}
+.FemaleLi svg[data-value="female"] {
+	fill: none;
+	stroke: var(--white-color);
+	transition: var(--hover-general);
+}
+.FemaleLi svg {
+	fill: none;
+	stroke: #f43f5e;
+	transition: var(--hover-general);
+}
+.FemaleLi:hover {
+	background-color: #f43f5e;
+}
+.FemaleLi:hover svg {
+	stroke: var(--white-color);
+}
+.MaleLi {
+	background-color: rgba(84, 173, 255, 0.1);
+}
+.MaleLi[data-value="male"] {
+	background-color: #f4adff;
+}
+.MaleLi svg {
+	fill: none;
+	stroke: #54adff;
+	transition: var(--hover-general);
+}
+.MaleLi svg[data-value="male"] {
+	fill: none;
+	stroke: var(--white-color);
+	transition: var(--hover-general);
+}
+.MaleLi:hover {
+	background-color: #54adff;
+}
+.MaleLi:hover svg {
+	stroke: var(--white-color);
+}
+.MultipleLi {
+	background-color: var(--accent-light);
+}
+.MultipleLi[data-value="multiple"] {
+	background-color: var(--accent-color);
+}
+.MultipleLi svg {
+	fill: var(--accent-color);
+	transition: var(--hover-general);
+}
+.MultipleLi svg[data-value="multiple"] {
+	fill: var(--white-color);
+	transition: var(--hover-general);
+}
+.MultipleLi:hover {
+	background-color: var(--accent-color);
+}
+.MultipleLi svg {
+	fill: var(--white-color);
+}
+@media screen and (min-width: 768px) {
+	.ListItems li {
+		width: 40px;
+		height: 40px;
+	}
+}
