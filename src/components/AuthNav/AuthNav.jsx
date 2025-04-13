@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import s from "./AuthNav.module.css";
 
 const AuthNav = ({ setIsShowMobileMenu }) => {

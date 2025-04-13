@@ -1,0 +1,41 @@
+.NavMenuList {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	row-gap: 10px;
+	width: 100%;
+}
+.StyledNavLink {
+	width: 119px;
+	height: 48px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 129%;
+	letter-spacing: -0.03em;
+	border-radius: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.StyledNavLink[data-ishomepage="true"] {
+	color: var(--dark-color);
+	border: 1px solid var(--link-gray);
+}
+.StyledNavLink[data-ishomepage="false"] {
+	color: var(--white-color);
+	border: 1px solid var(--white-light);
+}
+.StyledNavLink[data-ishomepage="true"].active {
+	border: 1px solid var(--accent-color);
+}
+.StyledNavLink[data-ishomepage="false"].active {
+	border: 1px solid var(--white-color);
+}
+@media screen and (min-width: 1280px) {
+	.NavMenuList {
+		flex-direction: row;
+		align-items: center;
+		column-gap: 10px;
+	}
+}

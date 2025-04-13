@@ -1,0 +1,34 @@
+.Button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: transparent;
+	border: none;
+	outline: none;
+	width: 36px;
+	height: 32px;
+}
+.Button[data-ishomepage="true"] svg {
+	stroke: var(--white-color);
+}
+.Button[data-ishomepage="false"] svg {
+	stroke: var(--dark-color);
+}
+
+@media screen and (min-width: 768px) {
+	.Button {
+		width: 40px;
+		height: 40px;
+	}
+
+	.Button svg {
+		width: 36px;
+		height: 36px;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.BurgerBtnContainer {
+		display: none;
+	}
+}

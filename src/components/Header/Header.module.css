@@ -1,0 +1,55 @@
+.MainHeader {
+	padding: 10px 20px 0 20px;
+	max-width: 375px;
+	margin: 0 auto;
+}
+.HeaderContainer {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+}
+.HeaderContainer[data-ishomepage="true"] {
+	padding: 24px 20px 22px 20px;
+	background-color: var(--accent-color);
+}
+.HeaderContainer[data-ishomepage="false"] {
+	padding: 24px 0px 22px 0px;
+	background-color: transparent;
+}
+.BlockBtns {
+	display: flex;
+	align-items: center;
+	column-gap: 8px;
+}
+
+@media screen and (min-width: 768px) {
+	.MainHeader {
+		max-width: 768px;
+		padding: 10px 32px 0 32px;
+	}
+	.HeaderContainer {
+		border-top-left-radius: 60px;
+		border-top-right-radius: 60px;
+	}
+	.HeaderContainer[data-ishomepage="true"] {
+		padding: 27px 32px 62px 32px;
+	}
+	.HeaderContainer[data-ishomepage="false"] {
+		padding: 27px 32px 62px 32px;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.MainHeader {
+		max-width: 1280px;
+	}
+	.HeaderContainer[data-ishomepage="true"] {
+		padding: 27px 64px 32px 64px;
+	}
+	.HeaderContainer[data-ishomepage="false"] {
+		padding: 27px 32px 32px 32px;
+	}
+}

@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React from "react";
 import { useMediaQuery } from "react-responsive";
 import { useAuth } from "../../hooks/useAuth";

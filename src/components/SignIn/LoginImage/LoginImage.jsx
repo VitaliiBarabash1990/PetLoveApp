@@ -13,17 +13,17 @@ const LoginImage = () => {
 			<picture>
 				<source
 					media="(min-width: 1280px)"
-					srcSet={`../../../assets/images/login/loginPC.webp 1x, ../../../assets/images/login/loginPC-2x.webp 2x, ../../../assets/images/login/loginPC-3x.webp 3x`}
+					srcSet="../../../assets/images/login/loginPC.webp 1x, ../../../assets/images/login/loginPC-2x.webp 2x, ../../../assets/images/login/loginPC-3x.webp 3x"
 					type="image/webp"
 				/>
 				<source
 					media="(min-width: 768px)"
-					srcSet={`../../../assets/images/login/dogLogin-tablet.webp 1x, ../../../assets/images/login/dogLogin-tablet-2x.webp 2x, ../../../assets/images/login/dogLogin-tablet-3x.webp 3x`}
+					srcSet="../../../assets/images/login/dogLogin-tablet.webp 1x, ../../../assets/images/login/dogLogin-tablet-2x.webp 2x, ../../../assets/images/login/dogLogin-tablet-3x.webp 3x"
 					type="image/webp"
 				/>
 				<source
 					media="(max-width: 767.98px)"
-					srcSet={`../../../assets/images/login/dog-mobile.webp 1x, ../../../assets/images/login/dog-mobile-2x.webp 2x, ../../../assets/images/login/dog-mobile-3x.webp 3x`}
+					srcSet="../../../assets/images/login/dog-mobile.webp 1x, ../../../assets/images/login/dog-mobile-2x.webp 2x, ../../../assets/images/login/dog-mobile-3x.webp 3x"
 					type="image/webp"
 				/>
 				<img
@@ -34,8 +34,8 @@ const LoginImage = () => {
 			</picture>
 			<svg width={332}>
 				<use
-					xlinkHref={
-						desktop ? `/sprite.svg#icon-shape-pc` : `/sprite.svg#icon-shape`
+					href={
+						desktop ? "/sprite.svg#icon-shape-pc" : "/sprite.svg#icon-shape"
 					}
 				></use>
 			</svg>

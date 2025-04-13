@@ -1,0 +1,14 @@
+.IconContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	margin: -8px;
+}
+.IconContainer svg {
+	min-width: 20px;
+	min-height: 20px;
+}
+.IconContainer svg:last-of-type {
+	margin-left: -14px;
+}

@@ -1,0 +1,72 @@
+.MainScreenContainer {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100dvw;
+	height: 100dvh;
+	background: url("../../assets/images/main/maindog.webp") no-repeat center /
+		cover;
+	z-index: 103;
+}
+@media (min-device-pixel-ratio: 2),
+	(min-resolution: 192dpi),
+	(min-resolution: 2dppx) {
+	.MainScreenContainer {
+		background: url("../../assets/images/main/maindog-2x.webp") no-repeat center /
+			cover;
+	}
+}
+.MainScreenContainer svg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	animation: appear 1200ms ease 1;
+}
+.MainScreenContainer {
+	@keyframes appear {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.MainScreenContainer {
+		background: url("../../assets/images/main/preloaderTablet.webp") no-repeat
+			center / cover;
+	}
+
+	.MainScreenContainer svg {
+		width: 374px;
+		height: 100px;
+	}
+
+	@media (min-device-pixel-ratio: 2),
+		(min-resolution: 192dpi),
+		(min-resolution: 2dppx) {
+		.MainScreenContainer {
+			background: url("../../assets/images/main/preloaderTablet-2x.webp")
+				no-repeat center / cover;
+		}
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.MainScreenContainer {
+		background: url("../../assets/images/main/screenPC.webp") no-repeat center /
+			cover;
+	}
+
+	@media (min-device-pixel-ratio: 2),
+		(min-resolution: 192dpi),
+		(min-resolution: 2dppx) {
+		.MainScreenContainer {
+			background: url("../../assets/images/main/screenPC-2x.webp") no-repeat
+				center / cover;
+		}
+	}
+}
