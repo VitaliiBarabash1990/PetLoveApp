@@ -1,4 +1,4 @@
-import { ReactNode, MouseEvent, useRef } from "react";
+import { useRef } from "react";
 import { createPortal } from "react-dom";
 import s from "./ModalGeneral.module.css";
 

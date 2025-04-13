@@ -1,4 +1,4 @@
-import CreationForm from "../../components/ForAddPetPage/CreationForm";
+import CreationForm from "../../components/ForAddPetPage/CreationForm/CreationForm";
 import ImageDog from "../../components/ImageDog/ImageDog";
 import s from "./AddPet.module.css";
 

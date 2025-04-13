@@ -1,0 +1,64 @@
+.ButtonsAuthContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 8px;
+}
+.LoginBtn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--white-color);
+	background-color: var(--accent-color);
+	border-radius: 30px;
+	border: 1px solid var(--white-color);
+	width: 178px;
+	height: 42px;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 129%;
+	letter-spacing: -0.03em;
+	transition: var(--hover-general);
+}
+.LoginBtn:hover {
+	background-color: var(--hover-color);
+	color: var(--accent-color);
+}
+.RegisterBtn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--accent-color);
+	background-color: var(--accent-light);
+	border-radius: 30px;
+	width: 178px;
+	height: 42px;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 129%;
+	letter-spacing: -0.03em;
+	transition: var(--hover-general);
+}
+.RegisterBtn:hover {
+	background-color: var(--hover-color);
+}
+@media screen and (min-width: 768px) {
+	.ButtonsAuthContainer {
+		flex-direction: row;
+		justify-content: center;
+	}
+	.LoginBtn {
+		font-size: 16px;
+		line-height: 1.25;
+		width: 119px;
+		height: 50px;
+	}
+	.RegisterBtn {
+		font-size: 16px;
+		line-height: 1.25;
+		width: 149px;
+		height: 50px;
+	}
+}

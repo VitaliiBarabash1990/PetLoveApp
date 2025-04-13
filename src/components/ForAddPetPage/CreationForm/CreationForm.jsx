@@ -1,18 +1,18 @@
 import { Link, useNavigate } from "react-router-dom";
 import s from "./CreationForm.module.css";
 import { useEffect, useState } from "react";
-import { addPetSchema } from "../../schemas/schemas";
+import { addPetSchema } from "../../../schemas/schemas";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
-import SexButtons from "./CreationForm/SexButtons/SexButtons";
-import PetAvatar from "./CreationForm/PetAvatar/PetAvatar";
-import BirthdayInput from "./CreationForm/BirthdayInput/BirthdayInput";
-import TypeAnimal from "./CreationForm/TypeAnimal/TypeAnimal";
+import SexButtons from "./SexButtons/SexButtons";
+import PetAvatar from "./PetAvatar/PetAvatar";
+import BirthdayInput from "./BirthdayInput/BirthdayInput";
+import TypeAnimal from "./TypeAnimal/TypeAnimal";
 
 const CreationForm = () => {
 	const navigate = useNavigate();
-	const preset_key = process.env.REACT_APP_PRESET_KEY;
-	const cloudURL = process.env.REACT_APP_CLOUDINARY_URL;
+	const preset_key = import.meta.env.VITE_PRESET_KEY;
+	const cloudURL = import.meta.env.VITE_CLOUDINARY_URL;
 	const [sexPet, setSexPet] = useState("unknown");
 	const [petType, setPetType] = useState(null);
 	const [birthDate, setBirthDate] = useState(null);
