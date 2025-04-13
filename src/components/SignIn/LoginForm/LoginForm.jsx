@@ -16,7 +16,7 @@ const LoginForm = () => {
 		setShowPasswordLogin((prev) => !prev);
 	};
 
-	const submitLogin = (dataForm: typeof initialValues) => {
+	const submitLogin = (dataForm) => {
 		const { email, password } = dataForm;
 	};
 

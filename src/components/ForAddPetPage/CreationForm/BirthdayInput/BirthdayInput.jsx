@@ -3,14 +3,10 @@ import IconCalendar from "./IconCalendar";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { Dayjs } from "dayjs";
 
-type BirthdayInputProps = {
-	setBirthDate: (date: string) => void;
-};
-
-export default function BirthdayInput({ setBirthDate }: BirthdayInputProps) {
+export default function BirthdayInput({ setBirthDate }) {
 	const tablet = useMediaQuery({ minWidth: 768 });
 
-	const handleDatePicker = (newValue: Dayjs | null) => {
+	const handleDatePicker = (newValue) => {
 		if (!newValue) return;
 		const year = newValue.year;
 		const month = String(+newValue.month + 1).padStart(2, "0");

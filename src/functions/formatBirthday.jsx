@@ -1,4 +1,4 @@
-export const formatBirthday = (birthday: string | Date) => {
+export const formatBirthday = (birthday) => {
 	const date = new Date(birthday);
 	const formattedDate = date
 		.toLocaleDateString("en-US", {

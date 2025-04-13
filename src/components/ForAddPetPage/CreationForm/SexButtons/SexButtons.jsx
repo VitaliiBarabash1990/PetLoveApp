@@ -1,12 +1,7 @@
 import s from "./SexButtons.module.css";
 
-type SexButtonsProps = {
-	setSexPet: (value: string) => void;
-	sexPet: string;
-};
-
-const SexButtons: React.FC<SexButtonsProps> = ({ setSexPet, sexPet }) => {
-	const handleChooseSex = (e: React.MouseEvent<HTMLLIElement>) => {
+const SexButtons = ({ setSexPet, sexPet }) => {
+	const handleChooseSex = (e) => {
 		const choosenValue = e.currentTarget.dataset.value;
 		if (!choosenValue) return;
 		setSexPet(choosenValue);

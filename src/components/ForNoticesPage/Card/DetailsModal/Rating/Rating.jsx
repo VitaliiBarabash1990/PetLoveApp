@@ -1,10 +1,6 @@
 import s from "./Rating.module.css";
 
-type RatingProps = {
-	popularity: number;
-};
-
-const Rating = ({ popularity }: RatingProps) => {
+const Rating = ({ popularity }) => {
 	const maxStars = 5;
 	const filledStars = Math.ceil((popularity / 37) * maxStars);
 

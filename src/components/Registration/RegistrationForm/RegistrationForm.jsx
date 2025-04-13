@@ -19,7 +19,7 @@ const RegistrationForm = () => {
 	const handleShowConfirmPassword = () =>
 		setShowConfirmPassword((prev) => !prev);
 
-	const submitRegistration = (dataForm: typeof initialValues) => {
+	const submitRegistration = (dataForm) => {
 		const { name, email, password } = dataForm;
 	};
 

@@ -1,0 +1,32 @@
+import { useSelector } from "react-redux";
+import {
+	selectFavoritesNotices,
+	selectIsLoading,
+	selectIsLoggedIn,
+	selectIsRefreshing,
+	selectPets,
+	selectUser,
+	selectViewedNotices,
+} from "../redux/auth/selectors";
+
+const useAuth = () => {
+	const isLoggedIn = useSelector(selectIsLoggedIn);
+	const isRefreshing = useSelector(selectIsRefreshing);
+	const isLoading = useSelector(selectIsLoading);
+	const user = useSelector(selectUser);
+	const favoritesNotices = useSelector(selectFavoritesNotices);
+	const viewedNotices = useSelector(selectViewedNotices);
+	const pets = useSelector(selectPets);
+
+	return {
+		isLoggedIn,
+		isRefreshing,
+		isLoading,
+		user,
+		favoritesNotices,
+		viewedNotices,
+		pets,
+	};
+};
+
+export default useAuth;

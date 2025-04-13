@@ -1,10 +1,6 @@
 import s from "./PetAvatar.module.css";
 
-type PetImageProps = {
-	petImageURL: string;
-};
-
-const PetAvatar: React.FC<PetImageProps> = ({ petImageURL }) => {
+const PetAvatar = ({ petImageURL }) => {
 	return (
 		<div className={s.AvatarContainer}>
 			<div className={s.ImageBox}>

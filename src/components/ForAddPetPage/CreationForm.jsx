@@ -9,31 +9,22 @@ import PetAvatar from "./CreationForm/PetAvatar/PetAvatar";
 import BirthdayInput from "./CreationForm/BirthdayInput/BirthdayInput";
 import TypeAnimal from "./CreationForm/TypeAnimal/TypeAnimal";
 
-type FormValues = {
-	sex: string;
-	imgURL: string;
-	title: string;
-	name: string;
-	birthday: string;
-	species: string;
-};
-
 const CreationForm = () => {
 	const navigate = useNavigate();
 	const preset_key = process.env.REACT_APP_PRESET_KEY;
 	const cloudURL = process.env.REACT_APP_CLOUDINARY_URL;
 	const [sexPet, setSexPet] = useState("unknown");
-	const [petType, setPetType] = useState<string | null>(null);
-	const [birthDate, setBirthDate] = useState<string | null>(null);
+	const [petType, setPetType] = useState(null);
+	const [birthDate, setBirthDate] = useState(null);
 	const [petImageURL, setPetImageURL] = useState("");
 	const {
 		register,
 		handleSubmit,
 		setValue,
 		formState: { errors },
-	} = useForm<FormValues>({ resolver: yupResolver(addPetSchema) });
+	} = useForm({ resolver: yupResolver(addPetSchema) });
 
-	const onSubmit = (data: FormValues) => {
+	const onSubmit = (data) => {
 		console.log(data);
 		navigate("/profile");
 	};
@@ -52,7 +43,7 @@ const CreationForm = () => {
 		}
 	}, [birthDate, petType, setValue, sexPet]);
 
-	const handleUploadAvatar = (e: React.ChangeEvent<HTMLInputElement>) => {
+	const handleUploadAvatar = (e) => {
 		const file = e.target.files?.[0];
 		if (!file) return;
 		const formData = new FormData();

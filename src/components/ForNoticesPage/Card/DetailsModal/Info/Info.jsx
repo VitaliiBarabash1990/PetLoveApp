@@ -1,13 +1,6 @@
 import s from "./Info.module.css";
 
-type Notice = {
-	name: string;
-	birthday: string;
-	sex: string;
-	species: string;
-};
-
-const Info = ({ notice }: { notice: Notice }) => {
+const Info = ({ notice }) => {
 	const { name, birthday, sex, species } = notice;
 	const date = new Date(birthday);
 	const formattedDate = date

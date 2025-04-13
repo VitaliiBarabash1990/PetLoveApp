@@ -1,13 +1,8 @@
 import { useMediaQuery } from "react-responsive";
 import useNotices from "../../../../hooks/useNotices";
-import Select, { SingleValue } from "react-select";
+import Select from "react-select";
 
-type TypeAnimalProps = {
-	setPetType: (data: string) => void;
-	petType: string | null;
-};
-
-const TypeAnimal = ({ petType, setPetType }: TypeAnimalProps) => {
+const TypeAnimal = ({ petType, setPetType }) => {
 	const tablet = useMediaQuery({ minWidth: 768 });
 	const { species } = useNotices();
 
@@ -19,14 +14,13 @@ const TypeAnimal = ({ petType, setPetType }: TypeAnimalProps) => {
 	// ];
 
 	const speciesData = species
-		? species.map((item: string) => ({
+		? species.map((item) => ({
 				value: item,
 				label: item.charAt(0).toUpperCase() + item.slice(1),
 		  }))
 		: [];
 
-	const handleByType = (e: SingleValue<{ value: string; label: string }>) =>
-		setPetType(e?.value || "");
+	const handleByType = (e) => setPetType(e?.value || "");
 	const selectValue =
 		petType === null
 			? null
