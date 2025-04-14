@@ -7,13 +7,13 @@ import Notices from "../../pages/Notices/Notices";
 import Friends from "../../pages/Friends/Friends";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import Profile from "../../pages/Profile/Profile";
-import Favorites from "../Favorites/Favorites";
 import Viewed from "../../pages/Viewed/Viewed";
 import AddPet from "../../pages/AddPet/AddPet";
 import RestrictedRoute from "../RestrictedRoute/RestrictedRoute";
 import Login from "../../pages/Login/Login";
 import NotFound from "../../pages/NotFound/NotFound";
 import Register from "../../pages/Register/Register";
+import Favorites from "../ForProfilePage/Favorites/Favorites.jsx";
 
 function App() {
 	return (

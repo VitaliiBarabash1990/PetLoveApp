@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import sprite from "../../assets/icons/icons.svg";
 import Loader from "../Loader/Loader";
 import s from "./MainScreen.module.css";
 
@@ -22,7 +21,7 @@ const MainScreen = () => {
 				<Loader />
 			) : (
 				<svg width={190} height={50}>
-					<use xlinkHref={`${sprite}#icon-logo-main`}></use>
+					<use href="/sprite.svg#icon-logo-main"></use>
 				</svg>
 			)}
 		</div>

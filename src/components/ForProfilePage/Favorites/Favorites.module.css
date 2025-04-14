@@ -6,6 +6,7 @@
 	row-gap: 20px;
 	animation: appearLeft 1000ms ease 1;
 }
+
 @media screen and (min-width: 768px) {
 	.ListFavorites {
 		margin-top: 20px;

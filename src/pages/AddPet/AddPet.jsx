@@ -1,5 +1,6 @@
 import CreationForm from "../../components/ForAddPetPage/CreationForm/CreationForm";
-import ImageDog from "../../components/ImageDog/ImageDog";
+import ImageDog from "../../components/ForAddPetPage/ImageDog/ImageDog.jsx";
+
 import s from "./AddPet.module.css";
 
 const AddPet = () => {
