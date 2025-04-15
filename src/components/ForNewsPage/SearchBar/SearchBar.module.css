@@ -1,0 +1,84 @@
+.SearchForm {
+	width: 100%;
+	position: relative;
+	animation: appearLeft 1000ms ease 1;
+}
+.SearchForm input {
+	width: 100%;
+	height: 42px;
+	padding: 12px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.29;
+	border-radius: 30px;
+	letter-spacing: -0.03em;
+	border: 1px solid transparent;
+	outline: none;
+}
+.SearchForm input:focus-within,
+.SearchForm input:hover {
+	border-color: var(--accent-color);
+}
+.SearchForm input::placeholder {
+	color: var(--dark-color);
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.29;
+	letter-spacing: -0.03em;
+}
+.SubmitSearchBtn {
+	width: 32px;
+	height: 32px;
+	outline: none;
+	border: none;
+	background-color: transparent;
+	position: absolute;
+	top: 6px;
+	right: 12px;
+}
+.SubmitSearchBtn svg {
+	fill: var(--white-color);
+	stroke: var(--dark-color);
+	transition: var(--hover-general);
+}
+.CancelSearchBtn {
+	width: 32px;
+	height: 32px;
+	outline: none;
+	border: none;
+	background-color: transparent;
+	position: absolute;
+	top: 6px;
+	right: 42px;
+}
+.CancelSearchBtn svg {
+	stroke: var(--placeholder-color);
+	transition: var(--hover-general);
+}
+.CancelSearchBtn:hover svg {
+	transform: scale(1.2);
+}
+@media screen and (min-width: 768px) {
+	.SearchForm {
+		width: 230px;
+	}
+	.SearchForm input {
+		height: 48px;
+		padding: 14px;
+		font-size: 16px;
+		line-height: 1.25;
+	}
+	.SearchForm input::placeholder {
+		font-size: 16px;
+		line-height: 1.25;
+	}
+	.SubmitSearchBtn {
+		top: 9px;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.SearchForm {
+		margin-right: 32px;
+	}
+}
