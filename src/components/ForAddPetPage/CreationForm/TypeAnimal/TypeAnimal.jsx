@@ -1,5 +1,5 @@
 import { useMediaQuery } from "react-responsive";
-import useNotices from "../../../../hooks/useNotices";
+import { useNotices } from "../../../../hooks/useNotices";
 import Select from "react-select";
 
 const TypeAnimal = ({ petType, setPetType }) => {

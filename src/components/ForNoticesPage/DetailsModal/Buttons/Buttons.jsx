@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { useAuth } from "../../../../hooks/useAuth";
+import useAuth from "../../../../hooks/useAuth";
 import {
 	AddToFavorites,
 	RemoveFromFavorites,

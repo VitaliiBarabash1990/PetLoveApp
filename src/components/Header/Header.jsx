@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import { useLocation } from "react-router-dom";
 import UserProfileBtn from "../UserProfileBtn/UserProfileBtn";
-import { useAuth } from "../../hooks/useAuth";
+import useAuth from "../../hooks/useAuth";
 import Logo from "./Logo/Logo";
 import BurgerBtn from "./BurgerBtn/BurgerBtn";
 import LogoutHeader from "./LogoutHeader/LogoutHeader";

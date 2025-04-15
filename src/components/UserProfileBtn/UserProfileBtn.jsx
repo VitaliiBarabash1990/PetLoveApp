@@ -1,6 +1,6 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
-import { useAuth } from "../../hooks/useAuth";
+import useAuth from "../../hooks/useAuth";
 import s from "./UserProfileBtn.module.css";
 import { Link } from "react-router-dom";
 

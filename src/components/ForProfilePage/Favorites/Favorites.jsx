@@ -1,10 +1,9 @@
-// @ts-nocheck
 import React, { useState, useEffect, useRef } from "react";
 import { useDispatch } from "react-redux";
 import { refreshUser } from "../../../redux/auth/operations";
 import { RemoveFromFavorites } from "../../../redux/notices/operations";
 import FavoriteCard from "./FavoriteCard/FavoriteCard";
-import { useAuth } from "../../../hooks/useAuth";
+import useAuth from "../../../hooks/useAuth";
 import NoCollectionText from "../NoCollectionText/NoCollectionText";
 import s from "./Favorites.module.css";
 

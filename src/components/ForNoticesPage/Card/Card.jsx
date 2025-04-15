@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
 import { formatBirthday } from "../../../functions/formatBirthday";
-import { useAuth } from "../../../hooks/useAuth";
+import useAuth from "../../../hooks/useAuth";
 import DetailsModal from "../DetailsModal/DetailsModal";
 import { viewedPet } from "../../../redux/auth/operations";
 import s from "./Card.module.css";

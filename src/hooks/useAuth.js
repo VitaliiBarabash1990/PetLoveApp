@@ -9,7 +9,7 @@ import {
 	selectPets,
 } from "../redux/auth/selectors";
 
-export const useAuth = () => {
+const useAuth = () => {
 	const isLoggedIn = useSelector(selectIsLoggedIn);
 	const isRefreshing = useSelector(selectIsRefreshing);
 	const isLoading = useSelector(selectIsLoading);
@@ -28,3 +28,5 @@ export const useAuth = () => {
 		pets,
 	};
 };
+
+export default useAuth;

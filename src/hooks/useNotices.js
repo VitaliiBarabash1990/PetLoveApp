@@ -4,7 +4,7 @@ import {
 	selectNotices,
 	selectIsError,
 	selectIsLoading,
-	selectGender,
+	selectGenders,
 	selectSpecies,
 	selectCities,
 	selectTotalPagesNotices,
@@ -12,7 +12,7 @@ import {
 
 export const useNotices = () => {
 	const categories = useSelector(selectCategories);
-	const genders = useSelector(selectGender);
+	const genders = useSelector(selectGenders);
 	const species = useSelector(selectSpecies);
 	const cities = useSelector(selectCities);
 	const notices = useSelector(selectNotices);
