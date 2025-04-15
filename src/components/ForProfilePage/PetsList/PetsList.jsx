@@ -1,18 +1,18 @@
 import React from "react";
 import { useAuth } from "../../../hooks/useAuth";
 import PetItem from "./PetItem/PetItem";
-import { ListOfPets } from "./PetsList.styled";
+import s from "./PetsList.module.css";
 
 const PetsList = () => {
-  const { pets } = useAuth();
+	const { pets } = useAuth();
 
-  return (
-    <ListOfPets>
-      {pets.map((pet) => (
-        <PetItem key={pet._id} pet={pet} />
-      ))}
-    </ListOfPets>
-  );
+	return (
+		<ul className={s.ListOfPets}>
+			{pets.map((pet) => (
+				<PetItem key={pet._id} pet={pet} />
+			))}
+		</ul>
+	);
 };
 
 export default PetsList;

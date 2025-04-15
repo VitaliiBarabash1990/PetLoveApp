@@ -1,26 +1,28 @@
 import React from "react";
-import sprite from "../../../assets/icons/icons.svg";
-import { ContainerFlex, EditBtn, UserBox } from "./UserAndEditBtns.styled";
+import s from "./UserAndEditBtns.module.css";
 
-const UserAndEditBtns = ({setShowEditForm}) => {
-
-  return (
-    <ContainerFlex>
-      <UserBox>
-        <div>
-          <p>User</p>
-          <svg width={18} height={18}>
-            <use xlinkHref={`${sprite}#icon-user`}></use>
-          </svg>
-        </div>
-      </UserBox>
-      <EditBtn type="button" onClick={() => setShowEditForm(true)}>
-        <svg width={18} height={18}>
-            <use xlinkHref={`${sprite}#icon-pencil`}></use>
-        </svg>
-      </EditBtn>
-    </ContainerFlex>
-  );
+const UserAndEditBtns = ({ setShowEditForm }) => {
+	return (
+		<div className={s.ContainerFlex}>
+			<div className={s.UserBox}>
+				<div>
+					<p>User</p>
+					<svg width={18} height={18}>
+						<use href="/sprite.svg#icon-user"></use>
+					</svg>
+				</div>
+			</div>
+			<button
+				type="button"
+				className={s.EditBtn}
+				onClick={() => setShowEditForm(true)}
+			>
+				<svg width={18} height={18}>
+					<use href="sprite.svg#icon-pencil"></use>
+				</svg>
+			</button>
+		</div>
+	);
 };
 
 export default UserAndEditBtns;

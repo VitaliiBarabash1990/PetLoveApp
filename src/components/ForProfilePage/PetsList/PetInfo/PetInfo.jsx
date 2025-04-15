@@ -1,6 +1,6 @@
 import React from "react";
 import { formatBirthday } from "../../../../functions/formatBirthday";
-import { ListInfoPet } from "./PetInfo.styled";
+import s from "./PetInfo.module.css";
 
 const PetInfo = ({ pet }) => {
 	const { name, birthday, sex, species } = pet;

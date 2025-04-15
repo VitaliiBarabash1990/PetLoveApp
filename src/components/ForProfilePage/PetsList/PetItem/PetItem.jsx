@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React from "react";
 import { useDispatch } from "react-redux";
 import PetInfo from "../PetInfo/PetInfo";

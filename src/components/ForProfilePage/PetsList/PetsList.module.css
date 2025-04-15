@@ -1,0 +1,26 @@
+.ListOfPets {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 14px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	animation: appearRight 1000ms ease 1;
+}
+
+@media screen and (min-width: 768px) {
+	.ListOfPets {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		column-gap: 14px;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.ListOfPets {
+		flex-direction: column;
+		flex-wrap: nowrap;
+		margin-bottom: 40px;
+	}
+}

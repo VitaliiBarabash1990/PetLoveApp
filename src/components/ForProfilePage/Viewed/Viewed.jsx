@@ -1,24 +1,23 @@
-// @ts-nocheck
 import React from "react";
 import { useAuth } from "../../../hooks/useAuth";
-import { Text } from "../NoCollectionText/NoCollectionText.styled";
 import ViewedList from "./ViewedList/ViewedList";
+import s from "./Viewed.module.css";
 
 const Viewed = () => {
-  const { viewedNotices } = useAuth();
+	const { viewedNotices } = useAuth();
 
-  return (
-    <div>
-      {viewedNotices?.length === 0 ? (
-        <Text>
-          Oops, <b>looks like there aren't any furries</b> on our adorable page yet.
-          Do not worry! When you open notices, they will appear here.
-        </Text>
-      ) : (
-        <ViewedList />
-      )}
-    </div>
-  );
+	return (
+		<div>
+			{viewedNotices?.length === 0 ? (
+				<p className={s.Text}>
+					Oops, <b>looks like there aren't any furries</b> on our adorable page
+					yet. Do not worry! When you open notices, they will appear here.
+				</p>
+			) : (
+				<ViewedList />
+			)}
+		</div>
+	);
 };
 
 export default Viewed;

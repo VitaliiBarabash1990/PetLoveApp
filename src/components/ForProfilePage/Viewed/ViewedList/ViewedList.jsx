@@ -1,18 +1,24 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 import { useAuth } from "../../../../hooks/useAuth";
 import Card from "../../../ForNoticesPage/Card/Card";
-import { ListFavorites } from "../../Favorites/Favorites.styled";
-
+import s from "./ViewedList.module.css";
 
 const ViewedList = () => {
-    const { viewedNotices } = useAuth();
-    const [, setShowFirstNotification] = useState(false);
+	const { viewedNotices } = useAuth();
+	const [, setShowFirstNotification] = useState(false);
 
-  return (
-    <ListFavorites>
-        {viewedNotices.map(notice => (<Card key={notice._id} notice={notice} setShowAttention={null} setShowFirstNotification={setShowFirstNotification}/>))}
-    </ListFavorites>
-  )
-}
+	return (
+		<ul className={s.ListFavorites}>
+			{viewedNotices.map((notice) => (
+				<Card
+					key={notice._id}
+					notice={notice}
+					setShowAttention={null}
+					setShowFirstNotification={setShowFirstNotification}
+				/>
+			))}
+		</ul>
+	);
+};
 
-export default ViewedList
+export default ViewedList;

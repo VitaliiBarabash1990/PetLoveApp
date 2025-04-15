@@ -117,5 +117,9 @@
 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.667" d="M16 6.667v18.667M6.667 16h18.667" />
 </symbol>
 
+<symbol id="icon-pencil" viewBox="0 0 32 32">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.667" d="M22.667 4a3.766 3.766 0 0 1 4.109-.817 3.766 3.766 0 0 1 2.04 4.926 3.766 3.766 0 0 1-.817 1.223l-18 18-7.333 2 2-7.333 18-18z" />
+</symbol>
+
   </defs>
 </svg>
