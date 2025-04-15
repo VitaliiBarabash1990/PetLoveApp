@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React, { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import { useLocation } from "react-router-dom";

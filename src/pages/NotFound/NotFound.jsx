@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import Cat404 from "../../components/NotFound/Cat404/Cat404";
 import s from "./NotFound.module.css";
+import Cat404 from "../../components/ForNotFound/Cat404/Cat404.jsx";
 
 const NotFound = () => {
 	return (
