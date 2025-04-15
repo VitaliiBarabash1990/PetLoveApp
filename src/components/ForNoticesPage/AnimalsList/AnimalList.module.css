@@ -1,0 +1,44 @@
+.ListOfNotices {
+	margin-top: 40px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 20px;
+	animation: appearDown 1000ms ease 1;
+}
+.Text {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.29;
+	letter-spacing: -0.02em;
+	text-align: center;
+	color: var(--dark-color);
+	margin: 80px 0;
+	animation: appearDown 1000ms ease 1;
+}
+.Text b {
+	color: var(--accent-color);
+}
+@media screen and (min-width: 768px) {
+	.ListOfNotices {
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin-top: 32px;
+		column-gap: 20px;
+	}
+	.Text {
+		font-size: 16px;
+		line-height: 1.25;
+	}
+}
+@media screen and (min-width: 1280px) {
+	.ListOfNotices {
+		margin-top: 40px;
+		column-gap: 32px;
+		row-gap: 40px;
+		justify-content: center;
+	}
+	.Text {
+		margin-top: 140px;
+	}
+}
