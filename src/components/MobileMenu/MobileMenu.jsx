@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React from "react";
 import Modal from "../Modal/Modal";
 import NavMenuMobile from "./NavMenuMobile/NavMenuMobile";

@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
-import "modern-normalize/modern-normalize.css";
-import App from "./components/App/App.jsx";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import { LocalizationProvider } from "@mui/x-date-pickers";
-import store, { persistor } from "./redux/store.js";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import "react-toastify/dist/ReactToastify.css";
+import store, { persistor } from "./redux/store";
+import "./index.css";
+import App from "./components/App/App.jsx";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

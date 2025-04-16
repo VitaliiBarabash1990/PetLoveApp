@@ -3,11 +3,12 @@ import { useDispatch } from "react-redux";
 import { ToastContainer } from "react-toastify";
 import { Outlet, useLocation } from "react-router-dom";
 import { fetchSpecies } from "../../redux/notices/operations";
-import Header from "../Header/Header";
+import LoaderMain from "../Common/LoaderMain/LoaderMain";
+import s from "../Common/LoaderMain/LoaderMain.module.css";
 import MainScreen from "../MainScreen/MainScreen";
-import LoaderMain from "../Common/LoaderMain/LoaderMain.jsx";
+import Header from "../Header/Header.jsx";
 
-const PageLayout = () => {
+const SharedLayout = () => {
 	const dispatch = useDispatch();
 	const location = useLocation();
 	const [showFirstScreen, setShowFirstScreen] = useState(
@@ -22,7 +23,7 @@ const PageLayout = () => {
 	return (
 		<>
 			<Header />
-			{showFirstScreen && <MainScreen />}
+			{/* {showFirstScreen && <MainScreen />} */}
 			<main>
 				<Suspense
 					fallback={
@@ -39,4 +40,4 @@ const PageLayout = () => {
 	);
 };
 
-export default PageLayout;
+export default SharedLayout;

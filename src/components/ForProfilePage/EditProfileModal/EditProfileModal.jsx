@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ModalGeneral from "../../ModalGeneral/ModalGeneral";
-import { useAuth } from "../../../hooks/useAuth";
+import useAuth from "../../../hooks/useAuth";
 import FormEditUser from "./FormEditUser/FormEditUser";
 
 const EditProfileModal = ({ setShowEditForm, showEditForm }) => {

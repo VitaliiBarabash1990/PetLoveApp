@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { schema } from "../../../../schemas/schemas";
 import { editUser } from "../../../../redux/auth/operations";
-import { useAuth } from "../../../../hooks/useAuth";
+import useAuth from "../../../../hooks/useAuth";
 
 const FormEditUser = ({ setImageURL, setShowEditForm }) => {
 	const dispatch = useDispatch();

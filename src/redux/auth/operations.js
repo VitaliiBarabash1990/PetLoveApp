@@ -1,11 +1,11 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import { createAsyncThunk } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
 
-axios.default.baseURL = import.meta.env.VITE_BASE_URL;
+axios.defaults.baseURL = "https://petlove.b.goit.study/api/";
 
 const setAuthHeader = (token) => {
-	axios.default.headers.common.Authorization = `Bearer ${token}`;
+	axios.defaults.headers.common.Authorization = `Bearer ${token}`;
 };
 
 const clearAuthHeader = () => {
@@ -16,7 +16,7 @@ export const register = createAsyncThunk(
 	"auth/register",
 	async (credentials, thunkAPI) => {
 		try {
-			const res = await axios.post("/users/singup", credentials);
+			const res = await axios.post("/users/signup", credentials);
 			setAuthHeader(res.data.token);
 			toast.success(`Welcome ${res?.data?.name}`);
 			return res.data;

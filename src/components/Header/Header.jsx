@@ -11,12 +11,14 @@ import AuthNav from "../AuthNav/AuthNav";
 import s from "./Header.module.css";
 
 const Header = () => {
+	console.log("Header mounted");
 	const tablet = useMediaQuery({ minWidth: 768 });
 	const tabletEnd = useMediaQuery({ maxWidth: 1279.98 });
 	const desktop = useMediaQuery({ minWidth: 1280 });
 	const location = useLocation();
 	const [isHomepage, setIsHomepage] = useState(false);
 	const { isLoggedIn } = useAuth();
+	console.log("isLoggedIn", isLoggedIn);
 
 	useEffect(() => {
 		if (location.pathname === "/home" || location.pathname === "/") {

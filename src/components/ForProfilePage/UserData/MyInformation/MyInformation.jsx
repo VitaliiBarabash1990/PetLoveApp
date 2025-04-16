@@ -1,5 +1,5 @@
 import React from "react";
-import { useAuth } from "../../../../hooks/useAuth";
+import useAuth from "../../../../hooks/useAuth";
 import s from "./MyInformation.module.css";
 
 const MyInformation = () => {

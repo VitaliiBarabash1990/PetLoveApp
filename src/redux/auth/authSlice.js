@@ -1,11 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 import {
-	addPet,
-	editUser,
+	register,
 	logIn,
 	logOut,
 	refreshUser,
-	register,
+	editUser,
+	addPet,
 	removePet,
 } from "./operations";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { useAuth } from "../../../hooks/useAuth";
+import useAuth from "../../../hooks/useAuth";
 import PetItem from "./PetItem/PetItem";
 import s from "./PetsList.module.css";
 

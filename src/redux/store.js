@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { configureStore } from "@reduxjs/toolkit";
 import { NewsReducer } from "./news/newsSlice";
 import { FriendsReducer } from "./friends/friendsSlice";

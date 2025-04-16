@@ -8,7 +8,7 @@ const Logo = ({ isHomepage }) => {
 			<Link to={"/home"}>
 				<svg>
 					<use
-						xlinkHref={
+						href={
 							isHomepage
 								? "/sprite.svg#icon-logo-white"
 								: "/sprite.svg#icon-logo-header"

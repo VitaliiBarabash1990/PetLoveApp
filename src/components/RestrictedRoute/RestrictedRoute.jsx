@@ -1,4 +1,4 @@
-import { FC, ReactElement } from "react";
+import React from "react";
 import { Navigate } from "react-router-dom";
 
 const RestrictedRoute = ({ component: Component, redirectTo = "/" }) => {
