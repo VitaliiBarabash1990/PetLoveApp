@@ -3,7 +3,11 @@ import { Link } from "react-router-dom";
 import s from "./AuthNav.module.css";
 
 const AuthNav = ({ setIsShowMobileMenu }) => {
-	const handleClick = () => setIsShowMobileMenu(false);
+	const handleClick = () => {
+		if (setIsShowMobileMenu) {
+			setIsShowMobileMenu(false);
+		}
+	};
 
 	return (
 		<div className={s.ButtonsAuthContainer}>

@@ -1,7 +1,7 @@
 import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
-axios.defaults.baseURL = import.meta.env.VITE_BASE_URL;
+axios.defaults.baseURL = "https://petlove.b.goit.study/api/";
 
 const setAuthHeader = (token) => {
 	axios.defaults.headers.common.Authirization = `Bearer ${token}`;

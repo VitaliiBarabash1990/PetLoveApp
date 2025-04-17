@@ -1,0 +1,100 @@
+.CardContainer {
+	background-color: var(--white-color);
+	border-radius: 15px;
+	padding: 40px 20px;
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+	column-gap: 14px;
+}
+.CardContainer span {
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	border-radius: 30px;
+	width: 90px;
+	height: 32px;
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 1.33;
+	letter-spacing: -0.02em;
+	color: var(--accent-color);
+	background-color: var(--accent-light);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.LogoCompany {
+	display: block;
+	width: 80px;
+	height: 80px;
+}
+.LogoCompany img {
+	width: 100%;
+	border-radius: 50%;
+}
+.InfoCompany {
+	color: var(--dark-color);
+}
+.InfoCompany h2 {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.25;
+	letter-spacing: -0.04em;
+}
+.ListDetails {
+	margin-top: 14px;
+	width: 194px;
+}
+.ListDetails li {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.29;
+	letter-spacing: -0.02em;
+	display: flex;
+	align-items: center;
+	column-gap: 2px;
+}
+.ListDetails li:not(:last-of-type) {
+	margin-bottom: 8px;
+}
+.ListDetails li p {
+	color: var(--placeholder-color);
+}
+.InfoLink {
+	color: var(--dark-color);
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow-x: hidden;
+	transition: var(--hover-general);
+}
+.InfoLink:hover,
+.InfoLink:focus {
+	color: var(--accent-color);
+	text-decoration: underline;
+}
+@media screen and (min-width: 768px) {
+	.CardContainer {
+		column-gap: 16px;
+	}
+	.CardContainer span {
+		font-size: 14px;
+		line-height: 1.29;
+		width: 102px;
+		height: 34px;
+	}
+	.LogoCompany {
+		width: 90px;
+		height: 90px;
+	}
+	.InfoCompany h2 {
+		font-size: 20px;
+		line-height: 1.3;
+	}
+}
+@media screen and (min-width: 1280px) {
+	.CardContainer {
+		width: 371px;
+		height: 196px;
+	}
+}

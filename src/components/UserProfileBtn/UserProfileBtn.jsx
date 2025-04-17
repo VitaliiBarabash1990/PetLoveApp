@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 const UserProfileBtn = ({ isHomepage }) => {
 	const tablet = useMediaQuery({ minWidth: 768 });
 	const { user } = useAuth();
+	console.log("UserProfileBtn");
 
 	return (
 		<>

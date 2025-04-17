@@ -1,3 +1,4 @@
+import React from "react";
 import useAuth from "../../hooks/useAuth";
 import s from "./Viewed.module.css";
 import { ViewedList } from "./ViewedList";

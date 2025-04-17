@@ -10,6 +10,7 @@ import s from "./Profile.module.css";
 
 const Profile = () => {
 	const [showEditForm, setShowEditForm] = useState(false);
+	console.log("showEditForm", showEditForm);
 	const dispatch = useDispatch();
 
 	useEffect(() => {

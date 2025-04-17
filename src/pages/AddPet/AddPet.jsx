@@ -1,3 +1,4 @@
+import React from "react";
 import CreationForm from "../../components/ForAddPetPage/CreationForm/CreationForm";
 import ImageDog from "../../components/ForAddPetPage/ImageDog/ImageDog.jsx";
 

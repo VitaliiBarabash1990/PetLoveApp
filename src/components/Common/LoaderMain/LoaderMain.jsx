@@ -19,7 +19,7 @@ const LoaderMain = () => {
 				width="180"
 				color="var(--accent-color)"
 				ariaLabel="hearts-loading"
-				wrapperStyle={(wrapperStyle = { LoaderStyles })}
+				wrapperStyle={LoaderStyles}
 				wrapperClass=""
 				visible={true}
 			/>

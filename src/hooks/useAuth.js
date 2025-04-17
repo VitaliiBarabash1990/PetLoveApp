@@ -18,7 +18,6 @@ const useAuth = () => {
 	const viewedNotices = useSelector(selectViewedNotices);
 	const pets = useSelector(selectPets);
 
-	console.log("isLoggedIn", isLoggedIn);
 	return {
 		isLoggedIn,
 		isRefreshing,
