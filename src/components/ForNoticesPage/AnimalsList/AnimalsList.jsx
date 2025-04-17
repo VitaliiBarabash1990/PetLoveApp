@@ -15,6 +15,7 @@ const AnimalsList = () => {
 	const dispatch = useDispatch();
 	const [showAttention, setShowAttention] = useState(false);
 	const [showFirstNotification, setShowFirstNotification] = useState(false);
+	console.log("Notices", notices);
 
 	const handleAddFavorites = (id) => {
 		dispatch(AddToFavorites(id));

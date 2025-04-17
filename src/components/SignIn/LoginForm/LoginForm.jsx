@@ -3,6 +3,8 @@ import s from "./LoginForm.module.css";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { schemaLogin } from "../../../schemas/schemas";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { logIn } from "../../../redux/auth/operations.js";
 
 const initialValues = {
 	email: "",
@@ -11,6 +13,7 @@ const initialValues = {
 
 const LoginForm = () => {
 	const [showPasswordLogin, setShowPasswordLogin] = useState(false);
+	const dispatch = useDispatch();
 
 	const handleShowPasswordLogin = () => {
 		setShowPasswordLogin((prev) => !prev);
@@ -18,6 +21,7 @@ const LoginForm = () => {
 
 	const submitLogin = (dataForm) => {
 		const { email, password } = dataForm;
+		dispatch(logIn({ email, password }));
 	};
 
 	return (
@@ -54,14 +58,14 @@ const LoginForm = () => {
 							{errors.email && touched.email && (
 								<span className={s.IconCheck}>
 									<svg width={18} height={18}>
-										<use href={`/sprite.svg#icon-x-red`}></use>
+										<use href="/sprite.svg#icon-x-red"></use>
 									</svg>
 								</span>
 							)}
 							{!errors.email && touched.email && (
 								<span className={s.IconCheck}>
 									<svg width={18} height={18}>
-										<use href={`/sprite.svg#icon-check`}></use>
+										<use href="/sprite.svg#icon-check"></use>
 									</svg>
 								</span>
 							)}
@@ -97,8 +101,8 @@ const LoginForm = () => {
 									<use
 										xlinkHref={
 											showPasswordLogin
-												? `/sprite.svg#icon-eye`
-												: `/sprite.svg#icon-eye-off`
+												? "/sprite.svg#icon-eye"
+												: "/sprite.svg#icon-eye-off"
 										}
 									></use>
 								</svg>
@@ -106,14 +110,14 @@ const LoginForm = () => {
 							{errors.password && touched.password && (
 								<span className={s.IconCheckPassword}>
 									<svg width={18} height={18}>
-										<use xlinkHref={`/sprite.svg#icon-x-red`}></use>
+										<use href="/sprite.svg#icon-x-red"></use>
 									</svg>
 								</span>
 							)}
 							{!errors.password && touched.password && (
 								<span className={s.IconCheckPassword}>
 									<svg width={18} height={18}>
-										<use xlinkHref={`/sprite.svg#icon-check`}></use>
+										<use href="/sprite.svg#icon-check"></use>
 									</svg>
 								</span>
 							)}

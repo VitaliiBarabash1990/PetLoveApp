@@ -1,13 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 import {
-	AddToFavorites,
 	fetchCategories,
-	fetchCities,
 	fetchGenders,
 	fetchSpecies,
+	fetchCities,
+	AddToFavorites,
 	RemoveFromFavorites,
-} from "./operations.js";
-import { fetchNotices } from "./filtration.js";
+} from "./operations";
+import { fetchNotices } from "./filtration";
 
 const initialState = {
 	notices: [],
@@ -24,6 +24,7 @@ const isPending = (state) => {
 	state.isLoading = true;
 	state.isError = false;
 };
+
 const isRejected = (state) => {
 	state.isLoading = false;
 	state.isError = true;

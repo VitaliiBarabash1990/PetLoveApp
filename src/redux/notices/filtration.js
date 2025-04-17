@@ -1,11 +1,11 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import { createAsyncThunk } from "@reduxjs/toolkit";
 
-axios.defaults.baseURL = import.meta.env.VITE_BASE_URL;
+axios.defaults.baseURL = "https://petlove.b.goit.study/api/";
 
 export const fetchNotices = createAsyncThunk(
 	"notices/fetchAll",
-	async (useParams, thunkAPI) => {
+	async (params, thunkAPI) => {
 		const {
 			keyword,
 			category,
@@ -51,6 +51,7 @@ export const fetchNotices = createAsyncThunk(
 			);
 			const totalPages = Math.ceil(filteredResults.length / itemsPerPage);
 			const displayedObjects = filteredResults.slice(startIndex, endIndex);
+
 			return { results: displayedObjects, totalPages };
 		} catch (error) {
 			return thunkAPI.rejectWithValue(error.message);

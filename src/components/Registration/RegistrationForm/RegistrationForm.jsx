@@ -3,6 +3,8 @@ import s from "./RegistrationForm.module.css";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import { schemaRegister } from "../../../schemas/schemas";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { register } from "../../../redux/auth/operations.js";
 
 const initialValues = {
 	name: "",
@@ -14,6 +16,7 @@ const initialValues = {
 const RegistrationForm = () => {
 	const [showPassword, setShowPassword] = useState(false);
 	const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+	const dispatch = useDispatch();
 
 	const handleShowPassword = () => setShowPassword((prev) => !prev);
 	const handleShowConfirmPassword = () =>
@@ -21,6 +24,7 @@ const RegistrationForm = () => {
 
 	const submitRegistration = (dataForm) => {
 		const { name, email, password } = dataForm;
+		dispatch(register({ name, email, password }));
 	};
 
 	return (
@@ -57,14 +61,14 @@ const RegistrationForm = () => {
 							{errors.name && touched.name && (
 								<span className={s.IconCheck}>
 									<svg width={18} height={18}>
-										<use href={"/sprite.svg#icon-x-red"}></use>
+										<use href="/sprite.svg#icon-x-red"></use>
 									</svg>
 								</span>
 							)}
 							{!errors.name && touched.name && (
 								<span className={s.IconCheck}>
 									<svg width={18} height={18}>
-										<use href={"/sprite.svg#icon-check"}></use>
+										<use href="/sprite.svg#icon-check"></use>
 									</svg>
 								</span>
 							)}
@@ -96,14 +100,14 @@ const RegistrationForm = () => {
 							{errors.email && touched.email && (
 								<span className={s.IconCheck}>
 									<svg>
-										<use href={"/sprite.svg#icon-x-red"}></use>
+										<use href="/sprite.svg#icon-x-red"></use>
 									</svg>
 								</span>
 							)}
 							{!errors.email && touched.email && (
 								<span className={s.IconCheck}>
 									<svg>
-										<use href={"/sprite.svg#icon-check"}></use>
+										<use href="/sprite.svg#icon-check"></use>
 									</svg>
 								</span>
 							)}
@@ -140,8 +144,8 @@ const RegistrationForm = () => {
 									<use
 										href={
 											showPassword
-												? `/sprite.svg#icon-eye`
-												: `/sprite.svg#icon-eye-off`
+												? "/sprite.svg#icon-eye"
+												: "/sprite.svg#icon-eye-off"
 										}
 									></use>
 								</svg>
@@ -149,14 +153,14 @@ const RegistrationForm = () => {
 							{errors.password && touched.password && (
 								<span className={s.IconCheckPassword}>
 									<svg>
-										<use xlinkHref={"/sprite.svg#icon-x-red"}></use>
+										<use href="/sprite.svg#icon-x-red"></use>
 									</svg>
 								</span>
 							)}
 							{!errors.password && touched.password && (
 								<span className={s.IconCheckPassword}>
 									<svg>
-										<use href={"/sprite.svg#icon-check"}></use>
+										<use href="/sprite.svg#icon-check"></use>
 									</svg>
 								</span>
 							)}
@@ -196,8 +200,8 @@ const RegistrationForm = () => {
 									<use
 										xlinkHref={
 											showConfirmPassword
-												? `/sprite.svg#icon-eye`
-												: `/sprite.svg#icon-eye-off`
+												? "/sprite.svg#icon-eye"
+												: "/sprite.svg#icon-eye-off"
 										}
 									></use>
 								</svg>
@@ -205,14 +209,14 @@ const RegistrationForm = () => {
 							{errors.confirmPassword && touched.confirmPassword && (
 								<span className={s.IconCheckPassword}>
 									<svg>
-										<use href={`/sprite.svg#icon-x-red`}></use>
+										<use href="/sprite.svg#icon-x-red"></use>
 									</svg>
 								</span>
 							)}
 							{!errors.confirmPassword && touched.confirmPassword && (
 								<span className={s.IconCheckPassword}>
 									<svg>
-										<use href={`/sprite.svg#icon-check`}></use>
+										<use href="/sprite.svg#icon-check"></use>
 									</svg>
 								</span>
 							)}
