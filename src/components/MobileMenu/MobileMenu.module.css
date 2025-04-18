@@ -7,6 +7,7 @@
 	align-items: center;
 	justify-content: space-between;
 }
+
 .MobileMenuContainer button {
 	width: 36px;
 	min-height: 36px;
@@ -19,9 +20,11 @@
 	margin-left: auto;
 	margin-top: -10px;
 }
+
 .MobileMenuContainer[data-ishomepage="true"] button svg {
-	stroke: var(var(--dark-color));
+	stroke: var(--dark-color);
 }
+
 .MobileMenuContainer[data-ishomepage="false"] button svg {
-	stroke: var(var(var(--white-color)));
+	stroke: var(--white-color);
 }

@@ -9,11 +9,11 @@ const MobileMenu = ({ setIsShowMobileMenu, isHomepage }) => {
 		<Modal setIsShowMobileMenu={setIsShowMobileMenu}>
 			<div
 				className={s.MobileMenuContainer}
-				data-ishomepage={isHomepage.toString()}
+				data-ishomepage={isHomepage ? "true" : "false"}
 			>
 				<button type="button" onClick={() => setIsShowMobileMenu(false)}>
 					<svg width={32} height={32}>
-						<use href="sprite.svg#icon-close"></use>
+						<use href="/sprite.svg#icon-close"></use>
 					</svg>
 				</button>
 				<NavMenuMobile

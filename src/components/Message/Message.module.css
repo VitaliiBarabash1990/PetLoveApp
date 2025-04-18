@@ -30,6 +30,7 @@
 	line-height: 1.17;
 	letter-spacing: -0.02em;
 	color: rgba(38, 38, 38, 0.8);
+	text-align: left;
 }
 .NameBirthdayBox {
 	display: flex;
