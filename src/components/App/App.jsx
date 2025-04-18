@@ -1,22 +1,31 @@
-import React from "react";
+import React, { lazy, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import SharedLayout from "../SharedLayout/SharedLayout.jsx";
-import HomePage from "../../pages/HomePage/HomePage";
-import News from "../../pages/News/News";
-import Notices from "../../pages/Notices/Notices";
-import Friends from "../../pages/Friends/Friends";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
-import Profile from "../../pages/Profile/Profile";
-import Viewed from "../../pages/Viewed/Viewed";
-import AddPet from "../../pages/AddPet/AddPet";
 import RestrictedRoute from "../RestrictedRoute/RestrictedRoute";
-import Login from "../../pages/Login/Login";
-import NotFound from "../../pages/NotFound/NotFound";
-import Register from "../../pages/Register/Register";
-import Favorites from "../ForProfilePage/Favorites/Favorites.jsx";
+import SharedLayout from "../SharedLayout/SharedLayout.jsx";
+import { useDispatch } from "react-redux";
+import { refreshUser } from "../../redux/auth/operations.js";
+
+const HomePage = lazy(() => import("../../pages/HomePage/HomePage"));
+const News = lazy(() => import("../../pages/News/News"));
+const Notices = lazy(() => import("../../pages/Notices/Notices"));
+const Friends = lazy(() => import("../../pages/Friends/Friends"));
+const Profile = lazy(() => import("../../pages/Profile/Profile"));
+const Viewed = lazy(() => import("../../pages/Viewed/Viewed"));
+const AddPet = lazy(() => import("../../pages/AddPet/AddPet"));
+const Login = lazy(() => import("../../pages/Login/Login"));
+const NotFound = lazy(() => import("../../pages/NotFound/NotFound"));
+const Register = lazy(() => import("../../pages/Register/Register"));
+const Favorites = lazy(() => import("../../pages/Register/Register"));
 
 function App() {
+	const dispatch = useDispatch();
+
+	useEffect(() => {
+		dispatch(refreshUser());
+	}, [dispatch]);
+
 	return (
 		<>
 			<Routes>
