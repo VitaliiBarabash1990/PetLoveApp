@@ -92,11 +92,11 @@ const Card = ({
 			)}
 			<li
 				className={s.CardContainer}
-				data-isviewedpage={isViewedPage.toString()}
+				data-isviewedpage={isViewedPage ? "true" : "false"}
 			>
 				<div
 					className={s.ImageAnimalContainer}
-					data-isviewedpage={isViewedPage.toString()}
+					data-isviewedpage={isViewedPage ? "true" : "false"}
 				>
 					<img src={imgURL} alt={title} />
 				</div>
@@ -105,7 +105,7 @@ const Card = ({
 						<h2>{title}</h2>
 						<span>
 							<svg width={16} height={16}>
-								<use href={`/sprite.svg#icon-star`}></use>
+								<use href="/sprite.svg#icon-star"></use>
 							</svg>{" "}
 							{popularity}
 						</span>
@@ -139,8 +139,8 @@ const Card = ({
 								<use
 									href={
 										isFavorite
-											? `/sprite.svg#icon-trash`
-											: `/sprite.svg#icon-heart`
+											? "/sprite.svg#icon-trash"
+											: "/sprite.svg#icon-heart"
 									}
 								></use>
 							</svg>

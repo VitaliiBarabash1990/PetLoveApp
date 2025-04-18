@@ -36,13 +36,13 @@ const TextInput = ({ setTextQuery, textQuery, inputValue, setInputValue }) => {
 					onClick={handleCancelSearch}
 				>
 					<svg width={18} height={18}>
-						<use href="sprite.svg#icon-close"></use>
+						<use href="/sprite.svg#icon-close"></use>
 					</svg>
 				</button>
 			)}
 			<button type="submit" className={s.SubmitSearchBtn}>
 				<svg width={18} height={18}>
-					<use href="sprite.svg#icon-search"></use>
+					<use href="/sprite.svg#icon-search"></use>
 				</svg>
 			</button>
 		</form>

@@ -33,7 +33,7 @@ const Modal = ({ children, setIsShowMobileMenu }) => {
 				>
 					<div
 						className={s.ModalContainer}
-						data-ishomepage={isHomepage.toString()}
+						data-ishomepage={isHomepage ? "true" : "false"}
 					>
 						{children}
 					</div>

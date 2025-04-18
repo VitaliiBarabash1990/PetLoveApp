@@ -6,6 +6,7 @@
 	row-gap: 10px;
 	width: 100%;
 }
+
 .StyledNavLink {
 	width: 119px;
 	height: 50px;
@@ -19,25 +20,31 @@
 	justify-content: center;
 	transition: var(--hover-general);
 }
-.StyledNavLink[data-ishomepage="true"] {
+
+.Homepage {
 	color: var(--white-color);
 	border: 1px solid var(--white-color);
 }
-.StyledNavLink[data-ishomepage="false"] {
+
+.NotHomepage {
 	color: var(--dark-color);
 	border: 1px solid var(--link-gray);
 }
-.StyledNavLink[data-ishomepage="true"].active {
+
+.ActiveHomepage {
 	color: var(--white-color);
 	border: 1px solid var(--white-color);
 }
-.StyledNavLink[data-ishomepage="false"].active {
+
+.ActiveNotHomepage {
 	color: var(--accent-color);
 	border: 1px solid var(--accent-color);
 }
+
 .StyledNavLink:hover {
 	border: 1px solid var(--white-light);
 }
+
 @media screen and (min-width: 1280px) {
 	.NavMenuList {
 		flex-direction: row;

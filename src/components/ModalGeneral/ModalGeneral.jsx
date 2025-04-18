@@ -28,7 +28,7 @@ const ModalGeneral = ({ children, fn }) => {
 								type="button"
 							>
 								<svg width={24} height={24}>
-									<use href="sprite.svg#icon-close"></use>
+									<use href="/sprite.svg#icon-close"></use>
 								</svg>
 							</button>
 							{children}

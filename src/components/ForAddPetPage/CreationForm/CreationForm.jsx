@@ -8,8 +8,11 @@ import SexButtons from "./SexButtons/SexButtons";
 import PetAvatar from "./PetAvatar/PetAvatar";
 import BirthdayInput from "./BirthdayInput/BirthdayInput";
 import TypeAnimal from "./TypeAnimal/TypeAnimal";
+import { addPet } from "../../../redux/auth/operations.js";
+import { useDispatch } from "react-redux";
 
 const CreationForm = () => {
+	const dispatch = useDispatch();
 	const navigate = useNavigate();
 	const preset_key = import.meta.env.VITE_PRESET_KEY;
 	const cloudURL = import.meta.env.VITE_CLOUDINARY_URL;
@@ -25,7 +28,7 @@ const CreationForm = () => {
 	} = useForm({ resolver: yupResolver(addPetSchema) });
 
 	const onSubmit = (data) => {
-		console.log(data);
+		dispatch(addPet(data));
 		navigate("/profile");
 	};
 

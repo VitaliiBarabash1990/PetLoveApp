@@ -39,7 +39,7 @@ const Buttons = ({
 			>
 				{isFavorite ? "Remove from" : "Add to"}
 				<svg width={18} height={18}>
-					<use href="sprite.svg#icon-heart"></use>
+					<use href="/sprite.svg#icon-heart"></use>
 				</svg>
 			</button>
 			<Link

@@ -21,10 +21,10 @@ export const LastIcon = () => {
 	return (
 		<div className={s.IconContainer}>
 			<svg width={18} height={18}>
-				<use href="sprite.svg#icon-right"></use>
+				<use href="/sprite.svg#icon-right"></use>
 			</svg>
 			<svg width={18} height={18}>
-				<use href="sprite.svg#icon-right"></use>
+				<use href="/sprite.svg#icon-right"></use>
 			</svg>
 		</div>
 	);

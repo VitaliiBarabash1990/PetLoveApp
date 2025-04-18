@@ -58,6 +58,7 @@
 	overflow: hidden;
 }
 .ListInfo p {
+	text-align: left;
 	font-weight: 500;
 	font-size: 10px;
 	line-height: 1.4;
@@ -73,6 +74,7 @@
 	text-transform: capitalize;
 }
 .CommentText {
+	text-align: left;
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 1.29;

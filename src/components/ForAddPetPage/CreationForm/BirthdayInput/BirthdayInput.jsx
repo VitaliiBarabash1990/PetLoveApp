@@ -1,16 +1,15 @@
+import React from "react";
 import { useMediaQuery } from "react-responsive";
-import IconCalendar from "./IconCalendar";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import { Dayjs } from "dayjs";
+import IconCalendar from "./IconCalendar";
 
-export default function BirthdayInput({ setBirthDate }) {
+const BirthdayInput = ({ setBirthDate }) => {
 	const tablet = useMediaQuery({ minWidth: 768 });
 
 	const handleDatePicker = (newValue) => {
-		if (!newValue) return;
-		const year = newValue.year;
-		const month = String(+newValue.month + 1).padStart(2, "0");
-		const day = String(newValue.date).padStart(2, "0");
+		const year = newValue.$y;
+		const month = String(+newValue.$M + 1).padStart(2, "0");
+		const day = String(newValue.$D).padStart(2, "0");
 		const formattedDate = `${year}-${month}-${day}`;
 		setBirthDate(formattedDate);
 	};
@@ -58,4 +57,6 @@ export default function BirthdayInput({ setBirthDate }) {
 			/>
 		</>
 	);
-}
+};
+
+export default BirthdayInput;

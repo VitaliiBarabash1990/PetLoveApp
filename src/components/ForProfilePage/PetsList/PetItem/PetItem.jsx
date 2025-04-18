@@ -25,7 +25,7 @@ const PetItem = ({ pet }) => {
 				onClick={handleDeletePet}
 			>
 				<svg width={16} height={16}>
-					<use href="sprite.svg#icon-trash"></use>
+					<use href="/sprite.svg#icon-trash"></use>
 				</svg>
 			</button>
 		</li>

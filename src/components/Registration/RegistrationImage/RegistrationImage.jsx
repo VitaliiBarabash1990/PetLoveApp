@@ -40,7 +40,7 @@ const RegistrationImage = () => {
 			<svg width={332}>
 				<use
 					href={
-						desktop ? `/sprite.svg#icon-shape-pc` : `/sprite.svg#icon-shape`
+						desktop ? "/sprite.svg#icon-shape-pc" : "/sprite.svg#icon-shape"
 					}
 				></use>
 			</svg>

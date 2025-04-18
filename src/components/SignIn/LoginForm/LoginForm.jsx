@@ -5,6 +5,7 @@ import { schemaLogin } from "../../../schemas/schemas";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { logIn } from "../../../redux/auth/operations.js";
+import clsx from "clsx";
 
 const initialValues = {
 	email: "",
@@ -77,20 +78,16 @@ const LoginForm = () => {
 						</label>
 						<label htmlFor="password">
 							<Field
-								className={s.StyledField}
+								className={clsx(s.StyledField, {
+									[s.ErrorField]: errors.password && touched.password,
+									[s.SuccessField]: !errors.password && touched.password,
+								})}
 								type={showPasswordLogin ? "text" : "password"}
 								name="password"
 								placeholder="Password"
 								required
+								autoComplete="new-password"
 								aria-label="Input for typing your password"
-								style={{
-									borderColor:
-										errors.password && touched.password
-											? "red"
-											: !errors.password && touched.password
-											? "var(--success-color)"
-											: "var(--link-gray)",
-								}}
 							/>
 							<button
 								className={s.ShowPasswordBtn}
@@ -99,7 +96,7 @@ const LoginForm = () => {
 							>
 								<svg width={18} height={18}>
 									<use
-										xlinkHref={
+										href={
 											showPasswordLogin
 												? "/sprite.svg#icon-eye"
 												: "/sprite.svg#icon-eye-off"

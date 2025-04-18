@@ -12,7 +12,7 @@ const NoAvatar = ({ setShowEditForm }) => {
 					<img src={user.avatar} alt={`Avatar of ${user.name}`} />
 				) : (
 					<svg width={40} height={40}>
-						<use href="sprite.svg#icon-user"></use>
+						<use href="/sprite.svg#icon-user"></use>
 					</svg>
 				)}
 			</div>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import ModalGeneral from "../../ModalGeneral/ModalGeneral";
 import useAuth from "../../../hooks/useAuth";
 import FormEditUser from "./FormEditUser/FormEditUser";
+import s from "./EditProfileModal.module.css";
 
 const EditProfileModal = ({ setShowEditForm, showEditForm }) => {
 	const { user } = useAuth();

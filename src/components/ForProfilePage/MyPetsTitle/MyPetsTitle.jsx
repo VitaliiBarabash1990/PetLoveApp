@@ -9,7 +9,7 @@ const MyPetsTitle = () => {
 			<Link to={"/add-pet"} className={s.AddPetLink}>
 				Add pet{" "}
 				<svg width={18} height={18}>
-					<use href="sprite.svg#icon-plus"></use>
+					<use href="/sprite.svg#icon-plus"></use>
 				</svg>
 			</Link>
 		</div>

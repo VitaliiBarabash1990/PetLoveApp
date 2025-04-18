@@ -125,6 +125,7 @@ const RegistrationForm = () => {
 								name="password"
 								placeholder="Password"
 								required
+								autoComplete="new-password"
 								aria-label="Input for typing your password"
 								style={{
 									borderColor:
@@ -198,7 +199,7 @@ const RegistrationForm = () => {
 							>
 								<svg>
 									<use
-										xlinkHref={
+										href={
 											showConfirmPassword
 												? "/sprite.svg#icon-eye"
 												: "/sprite.svg#icon-eye-off"

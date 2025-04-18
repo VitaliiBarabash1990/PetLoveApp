@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 const UserProfileBtn = ({ isHomepage }) => {
 	const tablet = useMediaQuery({ minWidth: 768 });
 	const { user } = useAuth();
-	console.log("UserProfileBtn");
 
 	return (
 		<>
@@ -21,7 +20,10 @@ const UserProfileBtn = ({ isHomepage }) => {
 				)}
 			</Link>
 			{tablet && (
-				<p className={s.UserName} data-ishomepage={isHomepage.toString()}>
+				<p
+					className={s.UserName}
+					data-ishomepage={isHomepage ? "true" : "false"}
+				>
 					{user.name}
 				</p>
 			)}

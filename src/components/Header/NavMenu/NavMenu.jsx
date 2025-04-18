@@ -1,7 +1,8 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { linksData } from "../../../lib/menuLinks/menu";
 import s from "./NavMenu.module.css";
-import { NavLink } from "react-router-dom";
+import clsx from "clsx";
 
 const NavMenu = ({ isHomepage }) => {
 	return (
@@ -10,8 +11,13 @@ const NavMenu = ({ isHomepage }) => {
 				<NavLink
 					key={to}
 					to={to}
-					className={s.StyledNavLink}
-					data-ishomepage={isHomepage.toString()}
+					className={({ isActive }) =>
+						clsx(
+							s.StyledNavLink,
+							isHomepage ? s.Homepage : s.NotHomepage,
+							isActive && (isHomepage ? s.ActiveHomepage : s.ActiveNotHomepage)
+						)
+					}
 				>
 					{label}
 				</NavLink>

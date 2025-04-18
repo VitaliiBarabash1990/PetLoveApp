@@ -54,7 +54,7 @@ const FavCard = ({ notice, onRemoveFavorites, favorites }) => {
 						<h2>{title}</h2>
 						<span>
 							<svg width={16} height={16}>
-								<use href="sprite.svg#icon-star"></use>
+								<use href="/sprite.svg#icon-star"></use>
 							</svg>{" "}
 							{popularity}
 						</span>

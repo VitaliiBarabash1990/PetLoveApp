@@ -33,7 +33,7 @@ const RadioSection = ({ setRadioSearch, radioSearch, setCurrentPage }) => {
 					{radioSearch === "Popular" && (
 						<button type="button" onClick={handleCancel}>
 							<svg width={18} height={18}>
-								<use href="sprite.svg#icon-close"></use>
+								<use href="/sprite.svg#icon-close"></use>
 							</svg>
 						</button>
 					)}
