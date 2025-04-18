@@ -5,6 +5,7 @@
 	margin: 0 auto;
 }
 .TitleOfPage {
+	text-align: left;
 	font-weight: 700;
 	font-size: 28px;
 	letter-spacing: -0.03em;

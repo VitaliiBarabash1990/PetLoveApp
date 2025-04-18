@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchNews } from "./operations.js";
+import { fetchNews } from "./operations";
 
 const initialState = {
 	news: [],
@@ -8,7 +8,7 @@ const initialState = {
 	isError: false,
 };
 
-export const newSlice = createSlice({
+export const newsSlice = createSlice({
 	name: "news",
 	initialState,
 	reducers: {},
@@ -31,4 +31,4 @@ export const newSlice = createSlice({
 	},
 });
 
-export const NewsReducer = newSlice.reducer;
+export const NewsReducer = newsSlice.reducer;

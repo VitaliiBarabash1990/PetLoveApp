@@ -23,7 +23,7 @@ const SharedLayout = () => {
 	return (
 		<>
 			<Header />
-			{/* {showFirstScreen && <MainScreen />} */}
+			{showFirstScreen && <MainScreen />}
 			<main>
 				<Suspense
 					fallback={

@@ -1,5 +1,5 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import { createAsyncThunk } from "@reduxjs/toolkit";
 
 axios.defaults.baseURL = "https://petlove.b.goit.study/api/";
 
@@ -11,7 +11,7 @@ export const fetchNews = createAsyncThunk(
 			if (!searchQuery) {
 				response = await axios.get(`/news?page=${page}`);
 			} else {
-				response = await axios.get(`/news?page=${page}$keyword=${searchQuery}`);
+				response = await axios.get(`/news?page=${page}&keyword=${searchQuery}`);
 			}
 			return response.data;
 		} catch (error) {

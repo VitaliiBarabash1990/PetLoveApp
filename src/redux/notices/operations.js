@@ -4,7 +4,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 axios.defaults.baseURL = "https://petlove.b.goit.study/api/";
 
 const setAuthHeader = (token) => {
-	axios.defaults.headers.common.Authirization = `Bearer ${token}`;
+	axios.defaults.headers.common.Authorization = `Bearer ${token}`;
 };
 
 export const fetchCategories = createAsyncThunk(
@@ -44,11 +44,23 @@ export const fetchSpecies = createAsyncThunk(
 	}
 );
 
+// export const fetchCities = createAsyncThunk(
+// 	"cities/fetchAll",
+// 	async (thunkAPI) => {
+// 		try {
+// 			const response = await axios.get("/cities");
+// 			return response.data;
+// 		} catch (error) {
+// 			return thunkAPI.rejectWithValue(error.message);
+// 		}
+// 	}
+// );
+
 export const fetchCities = createAsyncThunk(
 	"cities/fetchAll",
-	async (thunkAPI) => {
+	async (search, thunkAPI) => {
 		try {
-			const response = await axios.get("/cities");
+			const response = await axios.get(`/cities?search=${search}`);
 			return response.data;
 		} catch (error) {
 			return thunkAPI.rejectWithValue(error.message);

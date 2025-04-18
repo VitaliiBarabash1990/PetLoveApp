@@ -1,54 +1,73 @@
-# React + TypeScript + Vite
+<font size="36">PetLove App</font> – це платформа, яка допомагає знаходити новий дім для тваринок або нового пухнастого друга для людей, які хочуть подарувати турботу. Застосунок включає 6 загальнодоступних сторінок, 2 приватні сторінки (з вкладками "Улюблені" та "Переглянуті"), а також сторінки для входу та реєстрації користувача.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**ЗАГАЛЬНОДОСТУПНІ СТОРІНКИ**
 
-Currently, two official plugins are available:
+- Home - Головна – відкривається при першому запуску додатку або після виходу з профілю. Містить головний заголовок і зображення в стилі hero section.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- News - Новини – сторінка зі стрічкою новин, що стосується тварин і домашніх улюбленців. Можна скористатися пошуком і пагінацією. Натиснувши "Read more", відкриється нова вкладка з джерелом новини.
 
-## Expanding the ESLint configuration
+- Friends - Друзі – список контактів компаній, які активно підтримують тварин і сприяють їхній адаптації.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Find pet - Знайти улюбленця – сторінка з переліком доступних до всиновлення тварин. Є функціонал фільтрації за типом, статтю, локацією, ціною, популярністю, породою та ключовим словом.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- Registration page - Реєстрація – форма для створення нового облікового запису.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- Login page - Вхід – сторінка для авторизації зареєстрованих користувачів.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- 404 Page - Сторінка 404 – відображається у випадку переходу на неіснуючу адресу. Має кнопку повернення на головну.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+**ПРИВАТНІ СТОРІНКИ**
+
+- Profile - Профіль – персональна сторінка користувача з відображенням його даних, списком власних тварин, обраних та переглянутих оголошень. Користувач може редагувати інформацію про себе, змінювати аватар або вийти з системи. Також тут є перехід до сторінки додавання нової тварини. За замовчуванням відображається список улюблених.
+
+- Add-pet - Додати тварину – сторінка з формою для створення нового оголошення про тваринку. Після успішного додавання користувача перенаправляє назад до профілю.
+
+У верхній панелі доступна навігація по сторінках, можливість змінити палітру дизайну, зареєструватись або увійти.
+
+**Технології**
+
+**Застосунок створено з використанням:**
+React.js, Redux Toolkit, Redux-Persist, JavaScript, Styled-Components, Axios, Formik + Yup, React-hook-form, React-select, Material UI.
+
+Адаптований під мобільні пристрої (Mobile First) із трьома точками адаптації: 375px, 768px, 1280px. Враховано підтримку екранів з мінімальною шириною 320px. Усі зображення адаптовані до розмірів екрана і мають формат WebP.
+Дизайн-макет
+
+Figma: https://www.figma.com/file/puMNfZVg4YI8UZoJ1QiLLi/Petl%F0%9F%92%9Bve?type=design&node-id=55838-750&mode=design&t=Xg1IwIcKebTl5xGs-0
+
+Backend документація: https://petlove.b.goit.study/api-docs/
+
+**Технічні вимоги**
+
+https://docs.google.com/spreadsheets/d/1DmQUeGZy_oaXN6yn69ORLzou1ZQRyTMlrAqPSit_clw/edit?gid=1134921873#gid=1134921873
+
+**Загальні вимоги**
+
+**Адаптивність:**
+
+- мобільні пристрої — від 320px (fluid) до 375px (adaptive)
+
+- планшети — від 768px
+
+- десктопи — від 1280px
+
+**Проект включає:**
+
+- HTML5 семантика
+
+- Підключення шрифтів
+
+- Оптимізовані формати і розміри зображень (векторні й растрові)
+
+- Підтримка retina-дисплеїв
+
+- Ефективне завантаження статичних зображень
+
+- Всі іконки інтегровані через спрайт
+
+- Додано favicon сторінки
+
+Деплой: [https://pet-love-app-ten.vercel.app/]
+
+Проєкт доступний за посиланням: [https://github.com/VitaliiBarabash1990/PetLoveApp]
+
+Автор проєкту: Vitalii Barabash
