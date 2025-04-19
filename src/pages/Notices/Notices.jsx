@@ -20,7 +20,7 @@ const Notices = () => {
 	useEffect(() => {
 		dispatch(fetchCategories());
 		dispatch(fetchGenders());
-		dispatch(fetchCities());
+		// dispatch(fetchCities());
 	}, []);
 
 	return (

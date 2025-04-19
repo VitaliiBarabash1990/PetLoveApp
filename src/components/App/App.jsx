@@ -17,7 +17,9 @@ const AddPet = lazy(() => import("../../pages/AddPet/AddPet"));
 const Login = lazy(() => import("../../pages/Login/Login"));
 const NotFound = lazy(() => import("../../pages/NotFound/NotFound"));
 const Register = lazy(() => import("../../pages/Register/Register"));
-const Favorites = lazy(() => import("../../pages/Register/Register"));
+const Favorites = lazy(() =>
+	import("../ForProfilePage/Favorites/Favorites.jsx")
+);
 
 function App() {
 	const dispatch = useDispatch();
